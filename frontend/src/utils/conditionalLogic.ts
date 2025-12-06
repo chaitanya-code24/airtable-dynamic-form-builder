@@ -1,15 +1,4 @@
-export type Operator = "equals" | "notEquals" | "contains";
-
-export interface Condition {
-  questionKey: string;
-  operator: Operator;
-  value: any;
-}
-
-export interface ConditionalRules {
-  logic: "AND" | "OR";
-  conditions: Condition[];
-}
+import type { ConditionalRules } from "../types";
 
 export function shouldShowQuestion(
   rules: ConditionalRules | null,
